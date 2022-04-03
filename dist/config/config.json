@@ -6,5 +6,5 @@
     "lon": 38.97603,
     "cominghome": true,
     "comforttemp": 24,
-    "checkinterval": 1
+    "checkinterval": 5000
 }

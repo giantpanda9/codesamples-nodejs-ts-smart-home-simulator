@@ -62,7 +62,7 @@ class Brain {
             while (1) {
                 this.deviceStatus();
                 this.activity();
-                yield this.delay(5000);
+                yield this.delay(this.WeatherApi.checkinterval);
             }
         });
     }
