@@ -9,7 +9,7 @@ Node.js and Golang binary Smart Home Dev Simulator
 6) At the moment Golang binary is already included inthis package so you need not to build it yourself, the Node.js part will automaically run the Golang binary and start talking to it, so just run npm install -> npm run start, like suggested in points 1-4 and that should be it
 
 # The questions that could be asked on the first place for this code (FAQ based on probability):
-1) 
+ 
  ## Q: Why AJAX is used instead of IoT signalling system for an instance? 
  **A:** The answer will be given in three distinct sections, each of those provides a single seprate reason why AJAX is used.
 
@@ -19,7 +19,7 @@ Node.js and Golang binary Smart Home Dev Simulator
  
  -  This is not a 100% simulator system, in some way. Given the necessity it could be expanded to be working as a real hardware based Smart House system given some architecture additions and tiny changes would be implemented. Raspberry Pi systems (and similar systems as well) did support the Golang installation and if Golang part, which located in a bios folder will be upgraded to access the hardware ports of the Raspberry Pi via the low-level implementation (Golang is like C/C++ afterall) the bios part will stay on Raspberry Pi (let's say under Raspbian, but any Linux would do) it can still communicate with the central "brain" - hub via AJAX, while actual and real Switches, Air Conditioners and Heaters will connected from there by smartGo binary via hardware ports using driver-boards or hand-made interface boards connected to Raspberry Pi input ports. This way require additional investigation and not requested via task description directly therefore it is postponed and only shallow research is done for now on this matter. In short, even in this state it is theoretically possible to upgrate this system to a real working one - even based on AJAX - or so it seems.
    
-2)
+
   ## Q: Why Golang?
   **A:** The answer again will be given in three distinct sections, each of those provides a single seprate reason why AJAX is used.
   
@@ -38,7 +38,7 @@ if signal == "cold" && comingBackSoon { // if we received a singal that somebody
 			}
 		}
 ```
-3)
+
   ## Q: Is Golang an OOP style language?
   **A:** 
   Though Golang does not have a "classic" OOP implementation (not classic does not mean it is improper), with the "class"-like keywords, it still supports and hierarchy of objects, which are the main characteristic of OOP designed applications, but in more lightweight way. Types in Go can be embedded in other types, which result in something similar to subclassing. It supports encapsulation, interfaces and methods. The only main (and noticeable) difference from classic OOP is that Go is using Composition instead of Ineritance, which allows the creation of complex types by combining objects or components of other types, while inheritance based on a base and/or parent class ancestry. So, summarzing all that said, the Go does not violate the rule to implement the test in proper OOP style, it is still a proper-OOP language, just does it differently.
