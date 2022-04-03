@@ -31,7 +31,7 @@ Node.js and Golang binary Smart Home Dev Simulator
      2) Besides the Go binary is not just a simulator - like it was said in question 1, the Golang generated binary is a basis for the further development of Basic input and output system (BIOS), which will translate AJAX to some hardware port signals to a real Smart Devices using Raspberry Pi, for example. 
      
      3) The main difference of Go and JavaScript and Node.js is a different approach to multi-threading/multi-processing parallel systems. Go based on Goroutines a seprate process that could be created from a main one and yet have an easy access to the whole lexical and name spacing of the main program. In some cases it would be easy, like in a current example and in systems where this could become harder a messages that Goroutines can exchange can solve this issue. In particular case, Golang was really helpful, when solving the issue with the Heater, which was and intellectual device in its own turn. The Golang allowed to use an AfterFunc function to create a seprate Goroutine, which is supposed to turn off the heater after 25 minutes passed in a simple and elegant way as shown below:
-```
+
 if signal == "cold" && comingBackSoon { // if we received a singal that somebody would come back soon
 			if (heaterSwitch == false) { // double check that the heater is turned off
 				heaterSwitch = true /// turn it on
@@ -40,7 +40,7 @@ if signal == "cold" && comingBackSoon { // if we received a singal that somebody
 				})
 			}
 		}
-```
+
 3)
   ## Q: Is Golang an OOP style language?
   **A:** 
@@ -49,8 +49,8 @@ if signal == "cold" && comingBackSoon { // if we received a singal that somebody
   ## Q: Why some of code implementations are different from task description and some additional data taken from the Weather providing API?
   **A:** I took a liberty, I hope it will not violate the rules in a significant way, to improve the logic of the Smart Device simultor working in a very tiny way as follows:
   
-    1) The Switch - it looks like that "hot" and "cold" signals are being send to it at a random pace, no conditions described (at least in my edition of the task description or I missed those) in the document. So, I took additional data from the Weather API proposed and now the switch will turn on and off based on the time of sunrise and sunset. Not complete approach, to improve it, it would also be great to take cloudiness and visibility into account, but just do not wanted to violate the rules too much.
+ - The Switch - it looks like that "hot" and "cold" signals are being send to it at a random pace, no conditions described (at least in my edition of the task description or I missed those) in the document. So, I took additional data from the Weather API proposed and now the switch will turn on and off based on the time of sunrise and sunset. Not complete approach, to improve it, it would also be great to take cloudiness and visibility into account, but just do not wanted to violate the rules too much.
     
-    2) In case of air conditioner unit, it seems like its temperature would increase up to no limit, the same could be said in relation to decrease - to avoid this a comfort temperature parameter is added (its value could be changed in the config file) to limit the temperature that Air Conditioner Unit might produce both for "cold" and "hot".
+- In case of air conditioner unit, it seems like its temperature would increase up to no limit, the same could be said in relation to decrease - to avoid this a comfort temperature parameter is added (its value could be changed in the config file) to limit the temperature that Air Conditioner Unit might produce both for "cold" and "hot".
     
-    3) And in case of Heater, nothing changed too much, just added a check that it is already turned on, so that no new Gourutines would be created to turn it off - of course those would finish their task and stop working in order of creation (the first one, will exit last), but there is no reason to create too many similar instances of code to execute.
+ - And in case of Heater, nothing changed too much, just added a check that it is already turned on, so that no new Gourutines would be created to turn it off - of course those would finish their task and stop working in order of creation (the first one, will exit last), but there is no reason to create too many similar instances of code to execute.
