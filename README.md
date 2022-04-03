@@ -13,6 +13,9 @@ Node.js and Golang binary Smart Home Dev Simulator
  ## Q: Why AJAX is used instead of IoT signalling system for an instance? 
  **A:** The answer will be given in three distinct sections, each of those provides a single seprate reason why AJAX is used.
  
+ 
+ 
+ 
     1) As per task decription this is a simulator, a model, which required to trace and debug possible ways of exchanging an ivformation between modules and "the brain", AJAX is the most developed data exchanging system, a mature one, this means that there are popular instruments to debug it - like Postman that has been used as part of this development process - and it is much easier to check, which signal goes where and when, this saved time during development process. In short, to develop and debug quicker and save time.   
     
    2) Besides, as per task description I should keep in mind the architecture of the device/system and the system I am going to simulate in some way - not to 100% - was already described on free code camp - https://www.freecodecamp.org/news/the-most-robust-and-secure-home-automation-system-6d0ddbb39f29/ Though they use MongoDB there to keep a JSON signals and commands, I hardcode them(it is a quick-to-build-simulator, not a real system,afterall). There are many similar systems described via the Internet - the one proposed via freecodecamp is the closest one. In short, analogues are present to keep them in mind.
