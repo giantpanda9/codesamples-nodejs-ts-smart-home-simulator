@@ -8,6 +8,7 @@ Node.js and Golang binary Smart Home Dev Simulator
 5) the repository should already include the Golang smart device binary located in /bios/goSmart in both /dist and /src folders, however, if you wish to see the source code of the Golang part or rebuild it for your Linux, please see the corresponding repository
 6) at the moment Golang binary is already included inthis package so you need not to build it yourself, the Node.js part will automaically run the Golang binary and start talking to it, so just run npm install -> npm run start, like suggested in points 1-4 and that should be it
 7) changes to settings could be done using a config file available by src/config/config.json , if needed. You also could change there a setting that tells heater that somebody would return home soon or not (cominghome: bool)
+8) though installation steps are pretty easy in case, if you encounter any issues with building or running for your system, I can build the module for you in a similar system or show on screenshare how this should be done or work
 
 # The questions that could be asked on the first place for this code (FAQ based on probability):
  
