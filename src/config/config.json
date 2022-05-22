@@ -1,5 +1,5 @@
 {
-  "apikey": "686bffb083eb4275159b4ce7b50b9758",
+  "apikey": "686bffb083eb4275159b4ce7b50b97580",
   "apiurl": "https://api.openweathermap.org/data/2.5/weather?",
   "smartlink": "http://localhost:8081/smartdevice/",  
   "lat":45.04484,
